@@ -1,7 +1,7 @@
 {
-  "name":"short",
-  "version":"2.2.0",
-  "author":"Edward Hotchkiss <edwardhotchkiss@me.com>",
+  "name":"Wantering Shorten",
+  "version":"0.1",
+  "author":"99% Edward Hotchkiss <edwardhotchkiss@me.com>",
   "description":"Node.js URL Shortener backed by Mongoose.js",
   "contributors":[
     { "name": "Edward Hotchkiss", "email": "edwardhotchkiss@me.com" },
@@ -9,15 +9,16 @@
     { "name": "Chase Brammer", "github":"https://github.com/cbrammer" },
     { "name": "Chris Lynch", "github":"https://github.com/lynchseattle" },
     { "name": "CashLee", "github": "https://github.com/lbj96347" },
+    { "name": "Nick Molnar", "github": "https://github.com/neekolas" },
     { "name": "Patrick Williams", "github": "https://github.com/pwmckenna" }
   ],
-  "homepage": "http://edwardhotchkiss.github.com/short",
+  "homepage": "https://github.com/neekolas/short",
   "repository":{
     "type":"git",
-    "url":"git://github.com/edwardhotchkiss/short.git"
+    "url":"git://github.com/neekolas/short.git"
   },
   "keywords":["short","url","shortener","tiny","uri","vanity","bit.ly"],
-  "main":"./lib/short",
+  "main":"./lib/shorten",
   "engines":{
     "node":">=0.8.0"
   },
