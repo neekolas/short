@@ -1,5 +1,5 @@
 {
-  "name":"Wantering Shorten",
+  "name":"wantering-shorten",
   "version":"0.1.1",
   "author":"99% Edward Hotchkiss <edwardhotchkiss@me.com>",
   "description":"Node.js URL Shortener backed by Mongoose.js",
