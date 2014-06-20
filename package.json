@@ -1,5 +1,5 @@
 {
-  "name":"Wantering Shorten",
+  "name":"Wantering Short",
   "version":"0.1",
   "author":"99% Edward Hotchkiss <edwardhotchkiss@me.com>",
   "description":"Node.js URL Shortener backed by Mongoose.js",
@@ -18,7 +18,7 @@
     "url":"git://github.com/neekolas/short.git"
   },
   "keywords":["short","url","shortener","tiny","uri","vanity","bit.ly"],
-  "main":"./lib/shorten",
+  "main":"./lib/short",
   "engines":{
     "node":">=0.8.0"
   },
