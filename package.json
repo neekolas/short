@@ -2,8 +2,8 @@
   "name": "wantering-shorten",
   "version": "0.1.1",
   "author": {
-    "name": "Nick Molnar",
-    "email": "nm@wantering.com"
+    "name": "99% Edward Hotchkiss",
+    "email": "edwardhotchkiss@me.com"
   },
   "description": "Node.js URL Shortener backed by Mongoose.js",
   "contributors": [
