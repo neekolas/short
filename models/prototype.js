@@ -89,15 +89,32 @@ exports.Model.prototype.create = function(data) {
   return promise;
 };
 
+/*
+exports.Model.prototype.findOrCreate = function(query, document, options) {
+  var promise = new Promise()
+    , baseModel = this;
+  baseModel.findOneAndUpdate(query, { $set: document }, options, function(error, result) {
+    if (error) {
+        promise.reject(error, true);
+    } else {
+      if (result && result !== null) {
+        promise.resolve(result);
+      }  
+    };
+  });
+  return promise;
+};
+*/
 /**
  * @method findOrCreate
  * @description searches for a document, otherwise creates it.
- */
+ **/
 
 exports.Model.prototype.findOrCreate = function(query, document, options) {
   var promise = new Promise()
     , baseModel = this;
   baseModel.findOne(query, function(error, result) {
+    console.log(result);
     if (error) {
       if (error.message && error.message.match(/E11000/i)) {
         promise.reject(new Error('Duplicate Key Error'), true);
@@ -119,3 +136,4 @@ exports.Model.prototype.findOrCreate = function(query, document, options) {
   });
   return promise;
 };
+

@@ -17,10 +17,16 @@ options = {
 ShortURLSchema = new Schema({
   id         : { type : ObjectId },
   URL        : { type : String },
-  Publisher  : { type: String, default: 666 },
-  hash       : { type : String, unique: true },
+  pubID      : { type : String, default: '20569X892016' },
+  pubName    : { type : String },
+  hash       : { type : String, index: true },
   hits       : { type : Number, default: 0 },
   data       : { type : Schema.Types.Mixed },
+  product    : { type : Schema.Types.Mixed },
+  shortkey   : { type : String },
+  skimlink   : { type : Boolean },
+  skimURL    : { type : String },
+  bizrate    : { type : Schema.Types.Mixed },
   created_at : { type : Date, default: Date.now },
 }, options);
 
