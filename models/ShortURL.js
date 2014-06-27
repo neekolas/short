@@ -27,6 +27,8 @@ ShortURLSchema = new Schema({
   skimlink   : { type : Boolean },
   skimURL    : { type : String },
   bizrate    : { type : Schema.Types.Mixed },
+  bizrateBid : { type : Boolean },
+  bizrateURL : { type : String },
   created_at : { type : Date, default: Date.now },
 }, options);
 
