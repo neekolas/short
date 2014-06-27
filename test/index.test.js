@@ -6,7 +6,7 @@
 var vows = require('vows')
   , assert = require('assert')
   , mongoose = require('mongoose')
-  , short = require('../lib/short');
+  , short = require('../lib/shorten');
 
 mongoose.set('debug', true);
 
@@ -14,7 +14,7 @@ mongoose.set('debug', true);
  * @description connect to mongodb
  */
 
-short.connect('mongodb://localhost/short');
+short.connect('mongodb://localhost/shortdb');
 
 /**
  * @description add suites to vows
@@ -80,6 +80,43 @@ vows.describe('general module tests').addBatch({
     'and URLs should be an array of objects':function(error, URLs) {
       assert.isArray(URLs);
     }
-  }
+  },
+  'When looking up a US IP': {
+      topic: function () { 
+        var shortObj = {
+          bizrate: true,
+          URL: 'http://www.nodejs.org',
+          pubID: '666',
+          bizrateURL: 'http://www.npmjs.org',
+          skimlink: true
+        }
+        var req = {ip: '75.14.14.28'};
+        return short.chooseDestination(shortObj, req);
+      },
 
+      'We get nodejs.org': function (topic) {
+          assert.equal (topic, 'http://buy.wantering.com/?id=666&xs=1&url=http%3A%2F%2Fwww.npmjs.org');
+      }
+  }
+  /*
+    'when .chooseDestination()ing':{
+    topic: function() {
+      var context = this;
+      var shortObj = {
+        bizrate: true,
+        URL: 'http://www.nodejs.org',
+        pubID: '666',
+        bizrateURL: 'http://www.npmjs.org',
+        skimlink: true
+      }
+      var req = {ip: '75.14.14.28'};
+      //var destination = chooseDestination(shortObj, req);
+      var listPromise = short.chooseDestination(shortObj, req);
+    },
+    'Destination should be correct':function(error, destination){
+      var testURL = 'http://www.nodejs.org'
+      assert.equal(testURL, destination)
+    }
+  }
+  */
 }).export(module);
