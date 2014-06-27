@@ -17,7 +17,7 @@ options = {
 ShortURLSchema = new Schema({
   id         : { type : ObjectId },
   URL        : { type : String },
-  pubID      : { type : String, default: '20569X892016' },
+  pubID      : { type : String, default: '20569X892016', index: true },
   pubName    : { type : String },
   hash       : { type : String, index: true },
   hits       : { type : Number, default: 0 },
