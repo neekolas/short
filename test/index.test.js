@@ -97,17 +97,7 @@ vows.describe('general module tests').addBatch({
       },
 
       'We get nodejs.org': function (topic) {
-          assert.equal (topic, 'http://www.nodejs.org');
-      }
-  },
-  'When looking up a Canadian IP': {
-      topic: function () { 
-        var req = {ip: '70.79.78.200'};
-        return short.chooseDestination(shortObj, req);
-      },
-
-      'We get nodejs.org': function (topic) {
           assert.equal (topic, 'http://buy.wantering.com/?id=666&xs=1&url=http%3A%2F%2Fwww.npmjs.org');
-      }  
+      }
   }
 }).export(module);

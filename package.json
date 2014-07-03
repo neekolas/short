@@ -73,6 +73,6 @@
   "readmeFilename": "README.md",
   "_id": "wantering-shorten@0.1.1",
   "_shasum": "cb03a0da02771ead2482644d16ecaa9ad20d470a",
-  "_resolved": "git+https://github.com/neekolas/short.git#957d60f854abdcac18d98335da14b9d54c1368ae",
+  "_resolved": "git+https://github.com/neekolas/short.git#5f39517d4628b5767efac094a7de5dc20b400a95",
   "_from": "wantering-shorten@git+https://github.com/neekolas/short.git"
 }
