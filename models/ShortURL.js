@@ -29,6 +29,7 @@ ShortURLSchema = new Schema({
   bizrate    : { type : Schema.Types.Mixed },
   bizrateBid : { type : Boolean },
   bizrateURL : { type : String },
+  bizrateCPC : { type : String },
   created_at : { type : Date, default: Date.now },
 }, options);
 
