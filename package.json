@@ -57,6 +57,9 @@
   "devDependencies": {
     "vows": "0.7.0"
   },
+  "config": {
+    "geoip-lite:update": false
+  },
   "bugs": {
     "url": "https://github.com/edwardhotchkiss/short/issues"
   },
